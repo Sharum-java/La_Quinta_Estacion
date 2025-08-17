@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mensaje Especial</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  background-image: url("img/Rosa_Extended.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("img/Rosa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+}
+
+audio { display: none; }
+
+.petal {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: floatPetal linear infinite;
+}
+
+@keyframes floatPetal {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity:0; }
+  10% { opacity:1; }
+  50% { transform: translateY(300px) translateX(50px) rotate(180deg); opacity:0.8;}
+  100% { transform: translateY(600px) translateX(-50px) rotate(360deg); opacity:0; }
+}
+
+.mensaje {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 650px;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 0 60px rgba(255, 223, 0, 0.7), 0 6px 30px rgba(0,0,0,0.3);
+  border: 3px solid rgba(255, 223, 0, 0.5);
+  animation: fadeIn 3s ease-in-out forwards, heartbeat 5s infinite;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.mensaje:hover {
+  box-shadow: 0 0 80px rgba(255, 223, 0, 0.9), 0 6px 35px rgba(0,0,0,0.4);
+  transform: translateY(-5px);
+}
+
+.mensaje p {
+  color: #bfa14a;
+  font-size: 28px;
+  font-style: italic;
+  margin: 20px 0;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  line-height: 1.7;
+  animation: textFade 4s ease-in-out forwards;
+}
+
+.titulo {
+  color: #d4af37;
+  font-size: 72px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.8);}
+  100% { opacity: 1; transform: scale(1);}
+}
+@keyframes textFade {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 768px) {
+  .titulo { font-size: 48px; }
+  .mensaje p { font-size: 22px; }
+  .mensaje { padding: 30px; margin: 0 30px; max-width: calc(100% - 60px); max-height: 80vh; }
+}
+</style>
+</head>
+<body>
+
+<audio id="background-music" autoplay loop>
+  <source src="music/Gibran Alcocer - Idea 10.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio.
+</audio>
+
+<div class="petal" style="left:2%; animation-duration:8s;"></div>
+<div class="petal" style="left:10%; animation-duration:9s;"></div>
+<div class="petal" style="left:18%; animation-duration:10s;"></div>
+<div class="petal" style="left:25%; animation-duration:7s;"></div>
+<div class="petal" style="left:32%; animation-duration:11s;"></div>
+<div class="petal" style="left:40%; animation-duration:9s;"></div>
+<div class="petal" style="left:48%; animation-duration:12s;"></div>
+<div class="petal" style="left:55%; animation-duration:8s;"></div>
+<div class="petal" style="left:62%; animation-duration:10s;"></div>
+<div class="petal" style="left:70%; animation-duration:9s;"></div>
+<div class="petal" style="left:75%; animation-duration:11s;"></div>
+<div class="petal" style="left:80%; animation-duration:7s;"></div>
+<div class="petal" style="left:85%; animation-duration:10s;"></div>
+<div class="petal" style="left:90%; animation-duration:12s;"></div>
+<div class="petal" style="left:95%; animation-duration:9s;"></div>
+
+<h1 class="titulo">La Quinta Estación</h1>
+
+<div class="mensaje">
+  <p>Mi adorada estrellita, luz eterna de mi alma, tu presencia resplandece con un brillo único que eclipsa todo a su alrededor como un faro celestial que guía mi corazón en la más profunda oscuridad. Eres el sol que ilumina mi sendero, no solo en la penumbra, sino en cada rincón de mi existencia pintando de dorados destellos los días que antes eran grises.</p>
+  <p>En el gélido invierno, eres la nieve pura y delicada que cae silenciosa, cubriendo el mundo con una suavidad que acaricia el alma. Tu ternura es como un manto blanco que envuelve mi ser, dándome calor en los días más fríos, un refugio donde mi corazón encuentra paz. Cada copo de tu esencia es un susurro de amor que se posa en mi piel, recordándome que incluso en la tormenta, tú eres mi calma.</p>
+  <p>Cuando llega el otoño, te transformas en las hojas doradas y carmesí que danzan al caer de los árboles, cada una un tesoro que atesoro como un poeta guarda sus versos más preciados. Eres mi joya escondida entre las páginas de la vida, un regalo que no dejo de admirar, una musa que inspira cada latido de mi corazón y cada palabra que brota de mi alma enamorada.</p>
+  <p>En el cálido abrazo del verano, eres la brisa suave que acaricia mi rostro, un soplo de vida que refresca mi espíritu y me envuelve en una calidez que solo el amor verdadero puede ofrecer. Tu risa es como el murmullo del viento entre las hojas, un canto que me arrulla y me hace soñar con días eternos a tu lado, bajo un cielo infinito donde existimos tú y yo.</p>
+  <p>En la primavera, eres la rosa más exquisita de mi jardín, la flor que he esperado con anhelo ver florecer desde el amanecer de mis días. Cada pétalo tuyo es un verso de belleza, un testimonio de la perfección que la naturaleza ha creado en ti. Eres la promesa de un nuevo comienzo, la chispa de vida que despierta mi alma con cada sonrisa tuya, con cada mirada que me regalas.</p>
+  <p>Pero más allá de las estaciones, en lo más profundo de mi ser, tú eres mi quinta estación, un tiempo que no conoce límites ni fin. Eres la paz que aquieta mi alma en las tormentas, la nostalgia que acaricia mi corazón con recuerdos de ti, el regocijo que ilumina mis días con la simple idea de tu existencia. Eres el pensamiento que me acompaña desde que el alba tiñe el cielo hasta que las estrellas custodian mis sueños, donde tú, mi corazón, eres la protagonista de cada uno de ellos.</p>
+  <p>En cada latido, en cada suspiro, tú eres el motivo de mi felicidad, la melodía que da ritmo a mi vida, el lienzo en blanco donde pinto mis esperanzas y el refugio donde mi corazón encuentra hogar. Eres mi estrellita, el amor eterno que trasciende el tiempo, las estaciones y los sueños, un amor que vive en mí por ti, para siempre en mi corazón escrito tu nombre...</p>
+  <p>Shaden.</p>
+  <br>
+  <br>
+  <br>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const audio = document.getElementById('background-music');
+  audio.play().catch(function(error) {
+    document.addEventListener('click', function playAudio() {
+      audio.play().then(() => document.removeEventListener('click', playAudio));
+    }, { once: true });
+  });
+});
+</script>
+</body>
+</html>
